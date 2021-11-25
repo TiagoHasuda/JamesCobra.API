@@ -1,0 +1,5 @@
+export type EventsResponse = 'gameUpdate'
+    | 'getSeparateRooms'
+    | 'getSplitRooms'
+    | 'winGame'
+    | 'loseGame'
