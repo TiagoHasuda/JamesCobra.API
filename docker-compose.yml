@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  prod:
+    container_name: jamesSnake.API
+    build: .
+    restart: unless-stopped
+    ports:
+      - "80"
+    networks:
+      - traefik
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.logsdiscordbot.rule=Host(`snake.api.jameswebserver.com`)
+
+networks:
+  traefik:
+    external:
+      name: traefik
