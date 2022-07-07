@@ -11,7 +11,7 @@ services:
       - traefik
     labels:
       - traefik.enable=true
-      - traefik.http.routers.logsdiscordbot.rule=Host(`snake.api.jameswebserver.com`)
+      - traefik.http.routers.jamessnakeapi.rule=Host(`snake.api.jameswebserver.com`)
 
 networks:
   traefik:
